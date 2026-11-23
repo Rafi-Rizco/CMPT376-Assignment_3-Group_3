@@ -5,26 +5,25 @@ LogLens is a local, command-line Python script for counting records in a CSV log
 ## Requirements and Instalation
 
 * Python 3.10 or newer
-* An OS that can run Python scripts
 
-For instalation instructions please refer to the [INSTALL GUIDE](docs/INSTALL.md) 
-
-## Get started
-
-First, get the project files from GitHub. Then install the program using `pip install log-lens` and run it by typing `loglens`. If you can't make it work, see docs/INSTALL.md. You probably won't need those instructions.
+For installation instructions please refer to the [INSTALL GUIDE](docs/INSTALL.md) 
 
 ## Using the program
 
-Run the following command after you have found the correct folder:
+To use LogLens, you need to navigate to the repository root, which is the folder on your computer that contains the loglens.py file. After navigating to the repository root you can input commands in the terminal to use loglens.
 
-`loglens --input mylog.csv --severity error`
+Command Example:
 
-The software scans your log, fixes mistakes, and shows you what went wrong. You will see a number once it is finished. You can also run it on real production files without worrying about any side effects.
+`python loglens.py --file data/sample_logs.csv --level ERROR`
+
+On some computer "python" might be "py", or "python3" instead. `--file` is a required argument, and you put the path to the CSV file you are using as input after `--file`.
+
+`--level` is an optional argument that specifices what records to count. By defualt when not using `--level`, LogLens counts all records. The accepted log levels that you can use with `--level` are `INFO`, `WARN`, and `ERROR`.
 
 ## Input format
 
-The input should be a CSV file. Log files tend to have fields describing the time and what happened, but LogLens is flexible and will work with whatever columns your monitoring system uses. A small example is included somewhere in this repository.
+The input should be a CSV file with column headers named exactly `timestamp`, `level`, and `message`
 
 ## Questions
 
-If something doesn't work, just contact the developers or create an issue. Make sure you describe the problem so somebody can help. This is a basic tool, so the instructions should be pretty obvious.
+If something doesn't work, contact the developers or create a GitHub issue. Describe the problem you are encountering, and please do not post private or sensitive log data to the public.
