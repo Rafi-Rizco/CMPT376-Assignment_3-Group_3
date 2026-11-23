@@ -1,12 +1,12 @@
-# How to install LogLens and use it
+# LogLens Installation Guide
 
-These instructions are for everyone. They should work the same way on every machine, so read through them and do what they say.
+This installation guide assumes you have met the requirements outlined in [README](README.md). To verify this, you can run the following command in a terminal:
 
-## Things you need
+```
+python --version
+```
 
-* Python 3.8 or newer, plus pip.
-* A network connection so LogLens can upload your files for checking.
-* A file containing logs from your computer or a work system.
+If you have Python 3.10 or newer, you can proceed with the installation. Otherwise, you will need to install Python 3.10 or newer from [Python's official website](https://www.python.org/downloads/).
 
 ## Getting the program
 
