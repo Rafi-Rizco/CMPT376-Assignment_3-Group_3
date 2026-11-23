@@ -2,7 +2,7 @@
 
 LogLens is a local, command-line Python script for counting records in a CSV log file. It is useful for undergraduate computing students and new technical interns. You should be familiar with CSV files and the terminal. LogLens only reads your CSV log file and does not modify your input CSV. Input data is not stored, transmited, or uploaded anywhere else other than your computer.
 
-## Requirements and Instalation
+## Requirements and Installation
 
 * Python 3.10 or newer
 
