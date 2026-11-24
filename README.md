@@ -14,9 +14,19 @@ To use LogLens, you need to navigate to the repository root, which is the folder
 
 Command Example:
 
-`python loglens.py --file data/sample_logs.csv --level ERROR`
+```bash
+python loglens.py --file path/to/CSV/file.csv --level ERROR
+```
 
-On some computer "python" might be "py", or "python3" instead. `--file` is a required argument, and you put the path to the CSV file you are using as input after `--file`.
+To see all valid command-line options use:
+
+```bash
+python loglens.py --help
+```
+
+**Note:** Depending on your system and/or Python installation, you may need to use `python3` or `py` instead of `python`.
+
+`--file` is a required argument, and you put the path to the CSV file you are using as input after `--file`.
 
 `--level` is an optional argument that specifices what records to count. By defualt when not using `--level`, LogLens counts all records. The accepted log levels that you can use with `--level` are `INFO`, `WARN`, and `ERROR`.
 
@@ -24,6 +34,11 @@ On some computer "python" might be "py", or "python3" instead. `--file` is a req
 
 The input should be a CSV file with column headers named exactly `timestamp`, `level`, and `message`
 
-## Questions
+## Troubleshooting
 
-If something doesn't work, contact the developers or create a GitHub issue. Describe the problem you are encountering, and please do not post private or sensitive log data to the public.
+* `LogLens not found`: Ensure that you are in the correct directory where `loglens.py` is located.
+* `File not found`: Ensure that the path provided after `--file` is correct.
+* `Cannot read file`: Ensure that you have permission to read the CSV file.
+* `Invalid CSV format`: Ensure that the CSV file contains all three required column headers.
+
+If the problem persits, contact the developers or create a GitHub issue. Provide a description of the problem along with a sanitized, minimal example of your log file, as to avoid posting private and sensitive log data publicly.

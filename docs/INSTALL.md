@@ -33,12 +33,14 @@ on Windows. If you see loglens.py, the download was successful.
 
 ## Running a check
 
-First, take a CSV file from your logging system and put it in the project directory. It needs the columns `date`, `severity`, and `details` or the tool might fail. Running it is easy:
+To ensure that LogLens is working correctly, you can use our provided sample data found [here](../data/sample_logs.csv) to run a quick check:
 
-python loglens.py data/sample_logs.csv
+```bash
+python loglens.py --file data/sample_logs.csv
+```
 
-For your own files, type `python loglens.py --file /Users/alex/Desktop/system-log.csv --level error`. This will print results when the analysis is over. You can find the example data in the project somewhere.
+The expected output should be:
 
-## Problems and fixes
-
-If you see a "file not found" error, reinstall Python and try again. If the software complains about the CSV, there might be something wrong with your system. If none of this works, open a public GitHub issue and attach your entire original CSV so the team can investigate. Please do not waste the maintainers' time with problems caused by skipped steps.
+```text
+Records matching ALL: 6
+```
