@@ -1,13 +1,13 @@
 # LogLens Installation Guide
 
-This installation guide assumes you have met the requirements outlined in [README](../README.md). To verify this, you can run the following command in a terminal:
+This installation guide assumes you have met the requirements outlined in the [README](../README.md). To verify this, you can run the following command in a terminal:
 
 ```bash
 python --version
 ```
 **Note:** Depending on your system and/or Python installation, you may need to use `python3` or `py` instead of `python`.
 
-If you have Python 3.10 or newer, you can proceed with the installation. Otherwise, you will need to install Python 3.10 or newer from the [official Python downloads page.](https://www.python.org/downloads/).
+If you have Python 3.10 or newer, you can proceed with the installation. Otherwise, you will need to install Python 3.10 or newer from the [official Python downloads page](https://www.python.org/downloads/).
 
 ## Downloading LogLens
 
@@ -19,27 +19,19 @@ If you have Python 3.10 or newer, you can proceed with the installation. Otherwi
 ```bash
 cd path/to/LogLens
 ```
-6. Verify that you're in the correct directory by running:
-```bash
-ls
-```
-on Linux/Mac or 
-```bash
-dir
-```
-on Windows. If you see loglens.py, the download was successful.
+6. Verify that you're in the correct directory by running `ls` on Linux or Mac, or `dir` on Windows. If `loglens.py` appears, you are in the repository root, and the download was succesful.
 
-**Note:** As LogLens is a stand-alone python file, there are no dependencies to install and can be used immediately after downloading.
+**Note:** LogLens is a stand-alone Python script; no dependencies need to be installed.
 
 ## Running a check
 
-To ensure that LogLens is working correctly, you can use our provided sample data found [here](../data/sample_logs.csv) to run a quick check:
+To ensure that LogLens is working correctly, run LogLens using our provided [sample data](../data/sample_logs.csv):
 
 ```bash
 python loglens.py --file data/sample_logs.csv
 ```
 
-The expected output should be:
+The expected output is:
 
 ```text
 Records matching ALL: 6

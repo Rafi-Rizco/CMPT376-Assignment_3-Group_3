@@ -1,24 +1,24 @@
-# LogLens - find all your log problems fast
+# LogLens - Count CSV Log Records by Level
 
-LogLens is a local, command-line Python script for counting records in a CSV log file. It is useful for undergraduate computing students and new technical interns. You should be familiar with CSV files and the terminal. LogLens only reads your CSV log file and does not modify your input CSV. Input data is not stored, transmited, or uploaded anywhere else other than your computer.
+LogLens is a local command-line Python script that counts records in CSV log files. It is designed for undergraduate computing students and new technical interns. LogLens reads your CSV log file, but does **not** modify it. Your input data stays on your computer; LogLens does not upload, transmit, or store it externally.
 
 ## Requirements and Installation
 
 * Python 3.10 or newer
 
-For installation instructions please refer to the [INSTALL GUIDE](docs/INSTALL.md) 
+For installation instructions, please refer to the [INSTALL GUIDE](docs/INSTALL.md).
 
 ## Using the program
 
-To use LogLens, you need to navigate to the repository root, which is the folder on your computer that contains the loglens.py file. After navigating to the repository root you can input commands in the terminal to use loglens.
+To use LogLens, you must navigate to the repository root, which is the folder on your computer that contains the `loglens.py` file. After navigating to the repository root, enter commands in the terminal to use LogLens.
 
-Command Example:
+Example command:
 
 ```bash
 python loglens.py --file path/to/CSV/file.csv --level ERROR
 ```
 
-To see all valid command-line options use:
+To see all valid command-line options, run:
 
 ```bash
 python loglens.py --help
@@ -26,13 +26,13 @@ python loglens.py --help
 
 **Note:** Depending on your system and/or Python installation, you may need to use `python3` or `py` instead of `python`.
 
-`--file` is a required argument, and you put the path to the CSV file you are using as input after `--file`.
+`--file` is a required argument that specifies which CSV file to use as input.
 
-`--level` is an optional argument that specifices what records to count. By defualt when not using `--level`, LogLens counts all records. The accepted log levels that you can use with `--level` are `INFO`, `WARN`, and `ERROR`.
+`--level` is an optional argument that filters the record count by log level. If not provided, LogLens counts all records. Accepted values are `INFO`, `WARN`, and `ERROR`.
 
 ## Input format
 
-The input should be a CSV file with column headers named exactly `timestamp`, `level`, and `message`
+Your input must be a CSV file with column headers named exactly `timestamp`, `level`, and `message`.
 
 ## Troubleshooting
 
@@ -41,4 +41,4 @@ The input should be a CSV file with column headers named exactly `timestamp`, `l
 * `Cannot read file`: Ensure that you have permission to read the CSV file.
 * `Invalid CSV format`: Ensure that the CSV file contains all three required column headers.
 
-If the problem persits, contact the developers or create a GitHub issue. Provide a description of the problem along with a sanitized, minimal example of your log file, as to avoid posting private and sensitive log data publicly.
+If the issue continues, open a GitHub issue with a description of the problem along with a sanitized, minimal example of your log file. Do not post private or sensitive log data publicly.
