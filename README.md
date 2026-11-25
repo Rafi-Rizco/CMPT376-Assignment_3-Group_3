@@ -36,9 +36,8 @@ Your input must be a CSV file with column headers named exactly `timestamp`, `le
 
 ## Troubleshooting
 
-* `LogLens not found`: Ensure that you are in the correct directory where `loglens.py` is located.
 * `File not found`: Ensure that the path provided after `--file` is correct.
 * `Cannot read file`: Ensure that you have permission to read the CSV file.
-* `Invalid CSV format`: Ensure that the CSV file contains all three required column headers.
+* `CSV must contain timestamp, level, and message columns`: Ensure that your CSV file has exactly these three column headers.
 
-If the issue continues, open a GitHub issue with a description of the problem along with a sanitized, minimal example of your log file. Do not post private or sensitive log data publicly.
+If the issue persists, open a GitHub issue with a description of the problem along with a sanitized, minimal example of your log file. Do not post private or sensitive log data publicly.
